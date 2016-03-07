@@ -37,7 +37,7 @@ int main () {
 	int SamplingRate(2);
 	double NoiseVar(1.e-5);
 	CImg<double> TranfertFunction;
-	TranfertFunction.assign(2.*nx,2.*ny,2,1,1.).get_shared_plane(0).fill(0.);// only temperatures observations
+    TranfertFunction.assign(2.*nx,2.*ny,2,1,1.).get_shared_slice(0).fill(0.);// only temperatures observations
 
 	//path setting
 	system(const_cast<char*>(("mkdir "+ saveDir).c_str()));

@@ -140,38 +140,38 @@ void DynamicalModel::copySubroutine(const DynamicalModel &original){
 
 
             //shared constant and temporary buffers
-            m_fftadv_term1.assign(original.m_fftadv_term1, true);		m_fftadv_termTh1.assign(original.m_fftadv_termTh1, true);
-            m_fftadv_term2.assign(original.m_fftadv_term2, true);		m_fftadv_termTh2.assign(original.m_fftadv_termTh2, true);
-            m_fftadv_term3.assign(original.m_fftadv_term3, true);		m_fftadv_termTh3.assign(original.m_fftadv_termTh3, true);
-            m_fftadv_term4.assign(original.m_fftadv_term4, true);		m_fftadv_termTh4.assign(original.m_fftadv_termTh4, true);
+            m_fftadv_term1.assign(original.m_fftadv_term1, false);		m_fftadv_termTh1.assign(original.m_fftadv_termTh1, false);
+            m_fftadv_term2.assign(original.m_fftadv_term2, false);		m_fftadv_termTh2.assign(original.m_fftadv_termTh2, false);
+            m_fftadv_term3.assign(original.m_fftadv_term3, false);		m_fftadv_termTh3.assign(original.m_fftadv_termTh3, false);
+            m_fftadv_term4.assign(original.m_fftadv_term4, false);		m_fftadv_termTh4.assign(original.m_fftadv_termTh4, false);
 
-            m_vx2.assign(original.m_vx2, true);
-            m_vy2.assign(original.m_vy2, true);
-            m_dbx2.assign(original.m_dbx2, true);		m_dthx2.assign(original.m_dthx2, true);
-            m_dby2.assign(original.m_dby2, true);		m_dthy2.assign(original.m_dthy2, true);
+            m_vx2.assign(original.m_vx2, false);
+            m_vy2.assign(original.m_vy2, false);
+            m_dbx2.assign(original.m_dbx2, false);		m_dthx2.assign(original.m_dthx2, false);
+            m_dby2.assign(original.m_dby2, false);		m_dthy2.assign(original.m_dthy2, false);
 
-            m_vx3.assign(original.m_vx3, true);
-            m_vy3.assign(original.m_vy3, true);
-            m_dbx3.assign(original.m_dbx3, true);		m_dthx3.assign(original.m_dthx3, true);
-            m_dby3.assign(original.m_dby3, true);		m_dthy3.assign(original.m_dthy3, true);
+            m_vx3.assign(original.m_vx3, false);
+            m_vy3.assign(original.m_vy3, false);
+            m_dbx3.assign(original.m_dbx3, false);		m_dthx3.assign(original.m_dthx3, false);
+            m_dby3.assign(original.m_dby3, false);		m_dthy3.assign(original.m_dthy3, false);
 
-            m_vx4.assign(original.m_vx4, true);
-            m_vy4.assign(original.m_vy4, true);
-            m_dbx4.assign(original.m_dbx4, true);		m_dthx4.assign(original.m_dthx4, true);
-            m_dby4.assign(original.m_dby4, true);		m_dthy4.assign(original.m_dthy4, true);
+            m_vx4.assign(original.m_vx4, false);
+            m_vy4.assign(original.m_vy4, false);
+            m_dbx4.assign(original.m_dbx4, false);		m_dthx4.assign(original.m_dthx4, false);
+            m_dby4.assign(original.m_dby4, false);		m_dthy4.assign(original.m_dthy4, false);
 
-            m_fx.assign(original.m_fx, true);
-            m_fy.assign(original.m_fy, true);
-            m_laplacien_freq.assign(original.m_laplacien_freq, true);
-            m_laplacienInv_freq.assign(original.m_laplacienInv_freq, true);
+            m_fx.assign(original.m_fx, false);
+            m_fy.assign(original.m_fy, false);
+            m_laplacien_freq.assign(original.m_laplacien_freq, false);
+            m_laplacienInv_freq.assign(original.m_laplacienInv_freq, false);
 
-            m_ddx.assign(original.m_ddx, true);
-            m_ddy.assign(original.m_ddy, true);
+            m_ddx.assign(original.m_ddx, false);
+            m_ddy.assign(original.m_ddy, false);
 
-            m_fftvTmp.assign(original.m_fftvTmp, true);
-            m_fftvTmp2.assign(original.m_fftvTmp2, true);
+            m_fftvTmp.assign(original.m_fftvTmp, false);
+            m_fftvTmp2.assign(original.m_fftvTmp2, false);
 
-            m_tmpL63.assign(original.m_tmpL63,true);
+            m_tmpL63.assign(original.m_tmpL63,false);
 
 
 
