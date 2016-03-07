@@ -10,6 +10,23 @@
 DynamicalModel::DynamicalModel(){
     cout<<" default const dyn! "<<this<<endl;
 
+    m_a63=-1.;
+    m_r63=-1.;
+    m_b63=-1.;
+    m_nx=1;
+    m_ny=1; m_nt=1;
+    m_nbSnapshots=1;
+    m_timeStep=1;
+    m_diffCoef=0.;
+    m_RaNumber=0.;
+    m_domainLength=1.;
+
+    m_alpha=1.;
+    m_flag_filter=""; m_mainDir="";
+
+
+    m_allocate();
+    m_set_filters();
 
 }
 DynamicalModel::DynamicalModel(int nx,
@@ -517,7 +534,6 @@ void DynamicalModel::m_set_filters(){
 
     cimg_forY(m_laplacien_freq,x)
     {
-        std::cout << 'PROUT : ' << &m_fy;
         m_laplacien_freq.get_shared_row(x) += (m_fy.get_mul(m_fy)).get_transpose()*(-1.)*pow((double)(2.*M_PI/m_domainLength),2.);
 	}
 	m_laplacien_freq.transpose();//m_laplacien_freq.display("laplacian");

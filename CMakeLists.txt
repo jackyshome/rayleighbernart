@@ -41,9 +41,12 @@ include_directories(include
     ${FFTW_INCLUDE_DIRS}
     ${smctc_INCLUDE_DIRS}
     ${Boost_INCLUDE_DIRS}
+    /opt/X11/include
     )
 
-link_directories(${smctc_LIBRARY_DIRS})
+link_directories(${smctc_LIBRARY_DIRS}
+    /opt/X11/lib
+    )
 
 ## #############################################################################
 ## source defenition

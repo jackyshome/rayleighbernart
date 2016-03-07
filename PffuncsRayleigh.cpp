@@ -19,8 +19,8 @@ using namespace std;
 
     //dynamical model
     string flag_filter("Shannon");
-    string saveDirSurrogate("/local/rdebroiz/tmp/");
-    string saveDirTruePrior("/local/rdebroiz/tmp/");
+    string saveDirSurrogate("/Users/pheas/TemporaryBuffer/");
+    string saveDirTruePrior("/Users/pheas/TemporaryBuffer/");
     double domainLength(2.*M_PI);
     double alpha(1.);
     double timeStep(1.e-2);
@@ -32,7 +32,7 @@ using namespace std;
 
 
     //observation model variable
-    int maxObs(200);
+    int maxObs(20);
     int tStar(0);
     int tFreq(2);
     int SamplingRate(1);

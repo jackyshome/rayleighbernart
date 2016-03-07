@@ -29,7 +29,7 @@ ObservationModel::ObservationModel(DynamicalModel *dm,
 	if (m_NoiseVar<0){cout<<"Error: m_NoiseVar<0"<<endl;}
 
 	m_dm=dm;
-	m_pr=new double[m_nbObs];
+    m_pr=new double[m_nbObs + 1];
     m_idx_obs=new int[m_dm->getNt()+1];
     for (int i=0;i<=m_dm->getNt();i++){m_idx_obs[i]=0;}
     for (int i=tStar;i<=m_dm->getNt();i+=tFreq){m_idx_obs[i]=1;}
@@ -55,7 +55,7 @@ void ObservationModel::allocateCopy(const ObservationModel& original){
 	m_NoiseVar=original.m_NoiseVar;
 	m_TranfertFunction=original.m_TranfertFunction;
 	m_dm=original.m_dm;
-	m_pr=new double[m_nbObs];
+    m_pr=new double[m_nbObs + 1];
 	for (int i=0;i<=m_nbObs;i++){m_pr[i]=original.m_pr[i];}
     m_idx_obs=new int[m_dm->getNt()+1];
 	for (int i=0;i<=m_dm->getNt();i++){m_idx_obs[i]=original.m_idx_obs[i];}
